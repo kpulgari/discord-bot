@@ -10,7 +10,7 @@ load_dotenv()
 
 bot = commands.Bot(command_prefix='!')
 bot.videos = [os.getenv('one'), os.getenv('two'),
-'os.getenv('three')]
+os.getenv('three')]
 bot.happylist = []
 
 allowed_commands = ['hello', 'goodbye', 'music', 'happy', 'sad', 'calc', 'rand', 'quiz']
