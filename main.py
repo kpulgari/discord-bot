@@ -2,15 +2,15 @@ from discord.ext import commands
 from dotenv import load_dotenv
 import os
 import random
-# import asyncio
+import asyncio
 
-# 6/04 - QUIZ: recieve user input
+# fix env variables and user input for quiz cmd
 
 load_dotenv()
 
 bot = commands.Bot(command_prefix='!')
-bot.videos = ['https://www.youtube.com/watch?v=57ZODYKHhUg&list=RD57ZODYKHhUg&start_radio=1', 'https://www.youtube.com/watch?v=46teMg199cw&list=RD57ZODYKHhUg&index=6',
-'https://www.youtube.com/watch?v=kuYVwlkuBoQ&list=RDkuYVwlkuBoQ&start_radio=1']
+bot.videos = [os.getenv('one'), os.getenv('two'),
+'os.getenv('three')]
 bot.happylist = []
 
 allowed_commands = ['hello', 'goodbye', 'music', 'happy', 'sad', 'calc', 'rand', 'quiz']
